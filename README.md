@@ -1,2 +1,2 @@
-# sd-legislature-bills
-Details on bills introduced in the South Dakota Legislature.
+# South Dakota Legislature data archive
+Data files sourced from the South Dakota Legislature website.
