@@ -20,7 +20,7 @@ See also [`data/legislators/sd-legislature-legislators-historical.json`](data/le
 JSON files with details about each committee, slugged by committee ID, live in [`data/committees`](data/committees).
 
 ## Running the crawler
-Object classes -- [Session](crawler/models.py#L19), [Bill](crawler/models.py#L212), [LegislatorProfile](crawler/models.py#L526) and [Committee](crawler/models.py#L618) -- are defined in [`crawler/models.py`](crawler/models.py).
+Object classes -- `Session` `Bill`, `LegislatorProfile` and `Committee` -- are defined in [`crawler/models.py`](crawler/models.py).
 
 The code to crawl each session and conditionally write data to file is in [`main.py`](crawler/main.py). (Only new data, or data about the current session, is written to file.)
 
