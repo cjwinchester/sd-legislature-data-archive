@@ -1,14 +1,14 @@
 # South Dakota Legislature data archive
 This repo has data files sourced from the [South Dakota Legislature website](https://sdlegislature.gov/) with information on sessions, bills, legislators and committees from 1997 to present.
 
-_Updated February 26, 2023_
+_Updated March 08, 2023_
 
 ## The data
 
 ### Sessions (39)
 JSON files with details about each session, slugged by session ID, live in [`data/sessions`](data/sessions).
 
-### Bills (15,951)
+### Bills (15,964)
 JSON files with details about each bill, slugged by bill ID and including full text of each version and data on votes, live in [`data/bills`](data/bills).
 
 ### Legislator Profiles (4,120)
@@ -16,7 +16,7 @@ JSON files with details about each legislator profile, slugged by the legislator
 
 See also [`data/legislators/sd-legislature-legislators-historical.json`](data/legislators/sd-legislature-legislators-historical.json), which pulls data from the canonical ["Historical Listing"](https://sdlegislature.gov/Legislators/Historical) page for legislators, and [`crawler/sd-legislator-xwalk.csv`](crawler/sd-legislator-xwalk.csv), a file I made to map each legislator session profile ID to that legislator's canonical record. (The value attached to the `legislator_canonical_id` key in each JSON file is derived from this lookup.)
 
-### Committees (979)
+### Committees (980)
 JSON files with details about each committee, slugged by committee ID, live in [`data/committees`](data/committees).
 
 ## Running the crawler
