@@ -89,7 +89,15 @@ def gather_historical_legislator_data():
 
 
 def get_legislator_xwalk():
-    with open('sd-legislator-xwalk.csv', 'r') as infile:
+
+    filepath = os.path.abspath(
+        os.path.join(
+            os.path.dirname( __file__ ),
+            'sd-legislator-xwalk.csv'
+        )
+    )
+
+    with open(filepath, 'r') as infile:
         data = {x['legislator_profile_id']: x['legislator_id_canon'] for x in list(csv.DictReader(infile))}
     
     return data
