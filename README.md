@@ -1,7 +1,7 @@
 # South Dakota Legislature data archive
 This repo has data files sourced from the [South Dakota Legislature website](https://sdlegislature.gov/) with information on sessions, bills, legislators and committees from 1997 to present.
 
-_Updated March 22, 2023_
+_Updated April 7, 2023_
 
 ## The data
 
