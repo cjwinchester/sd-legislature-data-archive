@@ -1,0 +1,197 @@
+{
+    "68": {
+        "session": "2023",
+        "start_date": "2023-01-10",
+        "end_date": "2023-03-27"
+    },
+    "64": {
+        "session": "2022",
+        "start_date": "2022-01-11",
+        "end_date": "2022-03-28"
+    },
+    "66": {
+        "session": "2021 Second Special Session",
+        "start_date": "2021-11-09",
+        "end_date": "2022-06-21"
+    },
+    "65": {
+        "session": "2021 First Special Session",
+        "start_date": "2021-11-08",
+        "end_date": "2021-11-10"
+    },
+    "44": {
+        "session": "2021",
+        "start_date": "2021-01-12",
+        "end_date": "2021-03-29"
+    },
+    "62": {
+        "session": "2020 Special Session",
+        "start_date": "2020-10-05",
+        "end_date": "2020-10-05"
+    },
+    "43": {
+        "session": "2020",
+        "start_date": "2020-01-14",
+        "end_date": "2020-03-30"
+    },
+    "36": {
+        "session": "2019",
+        "start_date": "2019-01-08",
+        "end_date": "2019-03-29"
+    },
+    "37": {
+        "session": "2018 Special Session",
+        "start_date": "2018-09-12",
+        "end_date": "2018-09-12"
+    },
+    "32": {
+        "session": "2018",
+        "start_date": "2018-01-09",
+        "end_date": "2018-03-26"
+    },
+    "33": {
+        "session": "2017 Special Session",
+        "start_date": "2017-06-12",
+        "end_date": "2017-06-12"
+    },
+    "27": {
+        "session": "2017",
+        "start_date": "2017-01-10",
+        "end_date": "2017-03-27"
+    },
+    "24": {
+        "session": "2016",
+        "start_date": "2016-01-12",
+        "end_date": "2016-03-29"
+    },
+    "21": {
+        "session": "2015",
+        "start_date": "2015-01-13",
+        "end_date": "2015-03-30"
+    },
+    "20": {
+        "session": "2014",
+        "start_date": "2014-01-14",
+        "end_date": "2014-03-31"
+    },
+    "19": {
+        "session": "2013",
+        "start_date": "2013-01-08",
+        "end_date": "2013-03-25"
+    },
+    "15": {
+        "session": "2012",
+        "start_date": "2012-01-10",
+        "end_date": "2012-03-19"
+    },
+    "17": {
+        "session": "2011 Special Session",
+        "start_date": "2011-10-24",
+        "end_date": "2011-10-24"
+    },
+    "10": {
+        "session": "2011",
+        "start_date": "2011-01-11",
+        "end_date": "2011-03-28"
+    },
+    "8": {
+        "session": "2010",
+        "start_date": "2010-01-12",
+        "end_date": "2010-03-29"
+    },
+    "7": {
+        "session": "2009",
+        "start_date": "2009-01-13",
+        "end_date": "2009-03-30"
+    },
+    "4": {
+        "session": "2008",
+        "start_date": "2008-01-08",
+        "end_date": "2008-03-17"
+    },
+    "61": {
+        "session": "2007",
+        "start_date": "2007-01-09",
+        "end_date": "2007-03-26"
+    },
+    "60": {
+        "session": "2006 Special Session",
+        "start_date": "",
+        "end_date": ""
+    },
+    "59": {
+        "session": "2006",
+        "start_date": "2006-01-10",
+        "end_date": "2006-03-20"
+    },
+    "58": {
+        "session": "2005 Special Session",
+        "start_date": "2005-10-14",
+        "end_date": "2005-10-14"
+    },
+    "57": {
+        "session": "2005",
+        "start_date": "2005-01-11",
+        "end_date": "2005-03-22"
+    },
+    "56": {
+        "session": "2004",
+        "start_date": "2004-01-13",
+        "end_date": "2004-03-15"
+    },
+    "55": {
+        "session": "2003 Special Session",
+        "start_date": "2003-06-26",
+        "end_date": "2003-06-27"
+    },
+    "54": {
+        "session": "2003",
+        "start_date": "2003-01-14",
+        "end_date": "2003-03-24"
+    },
+    "53": {
+        "session": "2002",
+        "start_date": "2002-01-08",
+        "end_date": "2002-03-12"
+    },
+    "52": {
+        "session": "2001 Special Session",
+        "start_date": "2001-10-23",
+        "end_date": "2001-10-24"
+    },
+    "51": {
+        "session": "2001",
+        "start_date": "2001-01-09",
+        "end_date": "2001-03-21"
+    },
+    "50": {
+        "session": "2000 Special Session",
+        "start_date": "2000-12-28",
+        "end_date": "2000-12-29"
+    },
+    "49": {
+        "session": "2000",
+        "start_date": "2000-01-11",
+        "end_date": "2000-03-14"
+    },
+    "48": {
+        "session": "1999",
+        "start_date": "1999-01-12",
+        "end_date": "1999-03-23"
+    },
+    "47": {
+        "session": "1998",
+        "start_date": "1998-01-13",
+        "end_date": "1998-03-16"
+    },
+    "46": {
+        "session": "1997 Special Session",
+        "start_date": "1997-04-14",
+        "end_date": "1997-04-14"
+    },
+    "45": {
+        "session": "1997",
+        "start_date": "1997-01-14",
+        "end_date": "1997-03-26"
+    }
+}

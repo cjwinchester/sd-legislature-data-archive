@@ -19,8 +19,10 @@ REQUEST_HEADERS = {
 class Session(object):
     ''' A session of the S.D. Legislature '''
 
-    def __init__(self, session_id):
+    def __init__(self, session_id, lookup_table={}):
         self.session_id = session_id
+        self.lookup_table = lookup_table
+
         self.api_route = f'{BASE_URL}/api/Sessions/{self.session_id}'
 
         self.local_file = os.path.abspath(
@@ -53,12 +55,18 @@ class Session(object):
 
         data = r.json()
 
+        session_id = str(data.get('SessionId'))
+        start_date = self.lookup_table.get(session_id).get('start_date')
+        end_date = self.lookup_table.get(session_id).get('end_date')
+
         session_data = {
-            'session_id': data.get('SessionId'),
+            'session_id': session_id,
             'session_name': data.get('YearString'),
             'session_number': data.get('SessionNumber'),
             'is_current_session': data.get('CurrentSession'),
-            'is_special_session': data.get('SpecialSession')
+            'is_special_session': data.get('SpecialSession'),
+            'start_date': start_date,
+            'end_date': end_date
         }
 
         self.session_data = session_data

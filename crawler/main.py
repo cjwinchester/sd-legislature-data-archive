@@ -103,9 +103,24 @@ def get_legislator_xwalk():
     return data
 
 
+def get_session_dates_lookup():
+    filepath = os.path.abspath(
+        os.path.join(
+            os.path.dirname( __file__ ),
+            'session-dates.json'
+        )
+    )
+
+    with open(filepath, 'r') as infile:
+        data = json.load(infile)
+
+    return data
+
+
 def gather_session_data():
 
     leg_xwalk = get_legislator_xwalk()
+    session_dates = get_session_dates_lookup()
 
     sessions = requests.get(
         f'{BASE_URL}/api/Sessions',
@@ -114,7 +129,10 @@ def gather_session_data():
 
     for sesh in sessions:
         sesh_id = sesh.get('SessionId')
-        session = Session(sesh_id)
+        session = Session(
+            session_id=sesh_id,
+            lookup_table=session_dates
+        )
 
         print(session)
 
