@@ -1,0 +1,46 @@
+{
+    "54": {"year": "2003", "house": [], "senate": []},
+    "56": {"year": "2004", "house": [], "senate": []},
+    "57": {"year": "2005", "house": [], "senate": []},
+    "59": {"year": "2006", "house": [], "senate": []},
+    "61": {"year": "2007", "house": [], "senate": []},
+    "4": {"year": "2008", "house": [], "senate": []},
+    "7": {"year": "2009", "house": [], "senate": []},
+    "8": {"year": "2010", "house": [], "senate": []},
+    "10": {"year": "2011", "house": [], "senate": []},
+    "15": {"year": "2012", "house": [], "senate": []},
+    "19": {"year": "2013", "house": [], "senate": []},
+    "20": {"year": "2014", "house": [], "senate": []},
+    "21": {"year": "2015", "house": [], "senate": []},
+    "24": {"year": "2016", "house": [], "senate": []},
+    "27": {"year": "2017", "house": [], "senate": []},
+    "32": {"year": "2018", "house": [], "senate": []},
+    "36": {"year": "2019", "house": [], "senate": []},
+    "43": {"year": "2020", "house": [], "senate": []},
+    "44": {"year": "2021", "house": [], "senate": []},
+    "64": {"year": "2022", "house": [], "senate": []},
+    "68": {
+        "year": "2023",
+        "house": {
+            "pdf": "https://mylrc.sdlegislature.gov/api/Documents/239398.pdf",
+            "pdf_archive": "https://github.com/cjwinchester/sd-legislature-data-archive/blob/main/data/seating-charts/pdfs/2023-house.pdf",
+            "data": [
+                [4344, 4442, , 4384, 4468, , 4438, 4421, , 4334, ],
+                [4447, 4451, , 4437, 4406, , 4463, , 4388, 4398, , 4409, 4365],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+            ]
+        },
+        "senate": {
+            "pdf": "",
+            "data": [
+            [],
+            [],
+            []
+        ]}
+    }
+}
