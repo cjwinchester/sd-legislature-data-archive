@@ -19,9 +19,15 @@ REQUEST_HEADERS = {
 class Session(object):
     ''' A session of the S.D. Legislature '''
 
-    def __init__(self, session_id, lookup_table={}):
+    def __init__(
+        self,
+        session_id,
+        lookup_table={},
+        historical_legislator_data=None
+    ):
         self.session_id = session_id
         self.lookup_table = lookup_table
+        self.historical_legislator_data = historical_legislator_data
 
         self.api_route = f'{BASE_URL}/api/Sessions/{self.session_id}'
 
@@ -556,8 +562,15 @@ class Bill(object):
 class LegislatorProfile(object):
     ''' A Legislator serving in a particular Session '''
 
-    def __init__(self, session_id=None, legislator_profile_id=None, lookup_table={}):
+    def __init__(
+        self,
+        session_id=None,
+        legislator_profile_id=None,
+        lookup_table={},
+        historical_legislator_data=None
+    ):
         self.session_id = session_id
+        self.historical_legislator_data = historical_legislator_data
 
         # lookup table to map session profile IDs to canonical historical IDs
         self.lookup_table = lookup_table
@@ -627,7 +640,32 @@ class LegislatorProfile(object):
         canon_id = self.lookup_table.get(profile_id)
 
         if not canon_id:
-            print(f'Need to map legislator profile #{profile_id} to canonical member ID')
+            print(f'Need to map legislator profile to canonical member ID: {self.name} - {profile_id}')
+
+            profile_bits = '\n'.join([
+                f'    - {self.profile_data.get("chamber", "")}',
+                f'    - {self.profile_data.get("party", "")}',
+                f'    - {self.profile_data.get("city", "")}',
+                f'    - {self.profile_data.get("counties", "")}'
+            ])
+
+            print(profile_bits)
+
+            matches = [x for x in self.historical_legislator_data if x.get('name_last', '').upper() in self.name.upper() and x.get('name_first', '').upper() in self.name.upper()]
+
+            if matches:
+                print('\nPossible matches:')
+                for match in matches:
+                    canon_bits = '\n'.join([
+                        f'    - {match.get("name_first", "")} {match.get("name_last", "")} ({match.get("year_start", "")}-{match.get("year_end", "")}) - {match.get("legislator_id_canon", "")}',
+                        f'    - {match.get("chambers", "")}',
+                        f'    - {match.get("parties", "")}',
+                        f'    - {match.get("cities", "")}',
+                        f'    - {match.get("counties", "")}'
+                    ])
+
+                    print(canon_bits)
+                    print()
 
         try:
             canon_id = int(canon_id)

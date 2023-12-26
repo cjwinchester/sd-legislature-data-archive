@@ -44,6 +44,16 @@ def gather_historical_legislator_data():
         birthday = leg.get('Birthdate')
         deathday = leg.get('Deathdate')
 
+        member_id = leg.get('MemberId')
+        name_first = leg.get('FirstName')
+
+        # fix typos
+        if member_id == 3999:
+            name_first = 'Mellissa'
+
+        if member_id == 4018:
+            name_first = 'John'
+
         if birthday:
             try:
                 birthday = datetime.strptime(birthday, '%m-%d-%Y').date().isoformat()
@@ -60,10 +70,9 @@ def gather_historical_legislator_data():
         if notes:
             notes = ' '.join(notes.split())
 
-
         d = {
             'legislator_id_canon': leg.get('MemberId'),
-            'name_first': leg.get('FirstName'),
+            'name_first': name_first,
             'name_last': leg.get('LastName'),
             'name_middle': leg.get('MiddleName'),
             'gender': leg.get('Gender'),
@@ -86,6 +95,8 @@ def gather_historical_legislator_data():
         outfile.write(json.dumps(data_out))
 
     print(f'Downloaded {filepath}')
+
+    return data_out
 
 
 def get_legislator_xwalk():
@@ -117,7 +128,7 @@ def get_session_dates_lookup():
     return data
 
 
-def gather_session_data():
+def gather_session_data(historical_legislator_data=None):
 
     leg_xwalk = get_legislator_xwalk()
     session_dates = get_session_dates_lookup()
@@ -164,7 +175,8 @@ def gather_session_data():
             profile = LegislatorProfile(
                 session_id=sesh_id,
                 legislator_profile_id=leg_id,
-                lookup_table=leg_xwalk
+                lookup_table=leg_xwalk,
+                historical_legislator_data=historical_legislator_data
             )
 
             print(profile)
@@ -172,8 +184,6 @@ def gather_session_data():
             if not profile.file_exists:
                 profile.get_profile_data()
                 time.sleep(0.5)
-
-                print(profile)
 
                 profile.get_canonical_id()
                 profile.write_local_file()
@@ -250,5 +260,6 @@ if __name__ == '__main__':
         if not os.path.exists(data_path):
             os.makedirs(data_path)
 
-    gather_historical_legislator_data()
-    gather_session_data()
+    historical_legislator_data = gather_historical_legislator_data()
+    
+    gather_session_data(historical_legislator_data=historical_legislator_data)
