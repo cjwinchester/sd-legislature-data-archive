@@ -16,11 +16,10 @@ jobs:
     - run: pip install requests bs4
     - name: Run crawler
       run: python crawler/main.py
-    - name: Add and commit	
-      run: |
-        git add .	
-        git config user.name "Automated"	
-        git config user.email "actions@users.noreply.github.com"	
-        git commit -m "Latest data" 	
-    - name: Push	
-      run: git push
+    - name: Add and commit
+      id: add_commit
+      uses: EndBug/add-and-commit@v9
+      with:
+        committer_name: Automated
+        committer_email: actions@users.noreply.github.com
+        message: "Latest data"
