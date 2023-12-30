@@ -161,7 +161,4 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/osx
 
-
-README-TEMPLATE.md
-make_readme.py
 data/seating-charts/sd-legislature-seating-charts.json

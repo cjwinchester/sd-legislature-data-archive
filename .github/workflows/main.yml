@@ -15,7 +15,7 @@ jobs:
         python-version: '3.11'
     - run: pip install requests bs4
     - name: Run crawler
-      run: python crawler/main.py
+      run: python crawler/main.py && python make_readme.py
     - name: Add and commit
       id: add_commit
       uses: EndBug/add-and-commit@v9
