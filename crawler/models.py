@@ -252,6 +252,8 @@ class Bill(object):
             )
         )
 
+        self.rss_feed = f'https://sdlegislature.gov/api/Bills/RSS/{bill_id}'
+
         self.file_exists = os.path.exists(self.local_file)
 
 
@@ -292,6 +294,7 @@ class Bill(object):
             'bill_type': data.get('BillTypeFull'),
             'bill_number': data.get('BillNumber'),
             'bill_title': bill_title,
+            'rss_feed': self.rss_feed,
             'sponsors': sponsors,
             'keywords': [x.get('Keyword') for x in data.get('Keywords')]
         }
